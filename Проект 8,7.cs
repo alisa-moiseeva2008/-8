@@ -1,14 +1,12 @@
 using System;
-class Program
-{
-    static void Main(string[] args)
+    class Program
     {
-        Console.Write("Введите строку: ");
-        string строка = Console.ReadLine();
-        char[] массив = строка.ToCharArray();
-        Array.Reverse(массив);
-        string перевернутая = new string(массив);
-        Console.WriteLine($"Перевернутая строка: {перевернутая}");
-        Console.ReadKey();
+        static void Main(string[] args)
+        {
+            Console.Write("Введите предложение: ");
+            string предложение = Console.ReadLine();   
+            string[] слова = предложение.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); 
+            Console.WriteLine($"Количество слов: {слова.Length}");
+            Console.ReadKey();
+        }
     }
-}
